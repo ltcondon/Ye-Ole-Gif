@@ -85,12 +85,6 @@ h2 {
     max-height: 20px;
 }
 
-.button-div {
-    background-color: rgba(0, 0, 0, 0);
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
 .blue {
     /* position: relative; */
     /* bottom: -10px; */
@@ -125,4 +119,14 @@ h2 {
     /* position: relative; */
     /* bottom: -10px; */
     background-color: gold;
+}
+
+#images {
+    width: 870px;
+}
+
+.gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
