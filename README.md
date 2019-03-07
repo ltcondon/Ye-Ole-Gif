@@ -2,7 +2,7 @@
 
 url: [assets/images/opener-screenshot.png]
 
-Live link: https://ltcondon.github.io/GOT-Battle-Royale/
+Live link: https://ltcondon.github.io/Ye-Ole-Gif/
 
 # Summary
 
