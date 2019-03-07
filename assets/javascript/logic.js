@@ -6,7 +6,7 @@ $(document).ready(function() {
     var gifCount = 0; // to be assigned value of number of results specified
     var buttonColors = ["blue", "grey", "green", "orange", "cream", "yellow"];  // array of css classes that will be randomly assigned upon button creation;
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=";
-    var initialButtons = ["Frodo", "Dooku", "Gandalf", "Dumbledore"]; // initial buttons on page
+    var initialButtons = ["Frodo", "Gandalf", "Dumbledore"]; // initial buttons on page
     var gifLoaded = false;
 
 
@@ -37,13 +37,13 @@ $(document).ready(function() {
   $(document).on("click", ".gif-button", function() {
     $("#images").fadeOut();
       if (gifLoaded === false) {
-        $(".open").fadeOut();
+        $(".open").hide();
         $("#buttons").css("max-width", "800px");
         $("#buttons").css("padding-left", "8%");
         $("#buttons").css("top", "+=23px");
         setTimeout(function() {
             $("#back-button").fadeIn();
-        }, 950)
+        }, 350)
       }
         gifCount = 0;
         leftArea.empty();
@@ -106,13 +106,13 @@ $(document).ready(function() {
     $("#images").css("display", "none");
     $(".open").fadeOut();
         $("#buttons").css("max-width", "400px");
-        $("#buttons").css("padding-left", "-=8%");
+        $("#buttons").css("padding-left", "0%");
         $("#buttons").css("top", "-=23px");
         $("#pages-container").attr("id", "book-container")
-        $("#back-button").fadeOut();
+        $("#back-button").css("display", "none");
         setTimeout(function() {
             $(".open").fadeIn();
-        }, 350)
+        }, 150)
         gifLoaded = false;
       })
   })
