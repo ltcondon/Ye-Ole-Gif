@@ -9,7 +9,8 @@ $(document).ready(function() {
     var initialButtons = ["Frodo", "Dooku", "Gandalf", "Dumbledore"]; // initial buttons on page
     var gifLoaded = false;
 
-    $(document).ready(function() {
+
+    function generateButtons(array) {
         for (var i=0; i < initialButtons.length; i++) {
             newButton = $("<button>")
             newButton.addClass(buttonColors[Math.floor(Math.random() * 6)]);
@@ -18,7 +19,8 @@ $(document).ready(function() {
             newButton.val(initialButtons[i]);    
             buttonArea.prepend(newButton); 
         }
-    })
+    }
+    $(document).ready(generateButtons)
 
     $(document).on('keypress',function(e) {
       if ((e.which == 13) && ($("#inputSearch").val() !== null)) {
