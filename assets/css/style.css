@@ -28,6 +28,12 @@ h2 {
     text-align: center;
 }
 
+#buttons {
+    max-width: 400px;
+    bottom: -5px;
+    position: relative;
+}
+
 #book-container {
     background-image: url("../images/red-cover.jpg");
     height: 95%;
@@ -41,10 +47,10 @@ h2 {
 }
 
 #pages-container {
-    background-image: url("../images/open-book.png");
+    background-image: url("../images/open-book-lg.png");
     height: 95%;
-    width: 800px;
-    padding-top: 3%;
+    width: 1000px;
+    padding-top: 2%;
     max-height: 100%;
     display: block;
     margin: auto;
@@ -73,38 +79,50 @@ h2 {
     margin-right: auto;
 }
 
+.gif-button {
+    margin-left: 5px;
+    margin-right: 5px;
+    max-height: 20px;
+}
+
+.button-div {
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .blue {
-    position: relative;
-    bottom: -10px;
+    /* position: relative; */
+    /* bottom: -10px; */
     background-color: aqua;
 }
 
 .grey {
-    position: relative;
-    bottom: -10px;
+    /* position: relative; */
+    /* bottom: -10px; */
     background-color: gainsboro;
 }
 
 .green {
-    position: relative;
-    bottom: -10px;
+    /* position: relative; */
+    /* bottom: -10px; */
     background-color: chartreuse;
 }
 
 .orange {
-    position: relative;
-    bottom: -10px;
+    /* position: relative; */
+    /* bottom: -10px; */
     background-color: coral;
 }
 
 .cream {
-    position: relative;
-    bottom: -10px;
+    /* position: relative; */
+    /* bottom: -10px; */
     background-color: bisque;
 }
 
 .yellow {
-    position: relative;
-    bottom: -10px;
+    /* position: relative; */
+    /* bottom: -10px; */
     background-color: gold;
 }
