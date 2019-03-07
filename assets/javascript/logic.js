@@ -11,16 +11,16 @@ $(document).ready(function() {
 
 
     function generateButtons(array) {
-        for (var i=0; i < initialButtons.length; i++) {
+        for (var i=0; i < array.length; i++) {
             newButton = $("<button>")
             newButton.addClass(buttonColors[Math.floor(Math.random() * 6)]);
             newButton.addClass("gif-button");
-            newButton.text(initialButtons[i]);
-            newButton.val(initialButtons[i]);    
+            newButton.text(array[i]);
+            newButton.val(array[i]);    
             buttonArea.prepend(newButton); 
         }
     }
-    $(document).ready(generateButtons)
+    $(document).ready(generateButtons(initialButtons))
 
     $(document).on('keypress',function(e) {
       if ((e.which == 13) && ($("#inputSearch").val() !== null)) {
@@ -56,12 +56,13 @@ $(document).ready(function() {
       setTimeout(function(){
 
         $.ajax({
-            url: queryURL + searchWord + "&api_key=t8uKuW8SvPkDbPqFlCUt7GyWA5IkhH5M&limit=4",
+            url: queryURL + searchWord + "&api_key=t8uKuW8SvPkDbPqFlCUt7GyWA5IkhH5M&limit=50",
             method: "GET",
         }).then(function(response){
             console.log(response);
-
-        for (var i = 0; i < 4; i++){
+            
+        var random = Math.floor(Math.random() * 46)
+        for (var i = random; i < random + 4; i++){
             // console.log(i, response.data[i].images.fixed_height_still.url)
             gifCount++;
             var gifToAdd = $("<img>").attr("src", response.data[i].images.fixed_height_still.url);
