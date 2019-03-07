@@ -5,11 +5,26 @@ html, body {
 body {
     background-image: url("../images/wood_1.png");
     font-family: 'Srisakdi', cursive;
+    padding-top: 40px;
 }
 
 h1 {
     font-size: 100px;
     font-weight: bold;
+    color: gold;
+    /* text-shadow: 30px;
+    outline: 10px, black; */
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+h2 {
+    font-size: 90px;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 30px;
+    outline: 10px, black;
+    text-overflow: ellipsis;
     text-align: center;
 }
 
@@ -18,13 +33,25 @@ h1 {
     height: 95%;
     width: 400px;
     padding-top: 3%;
-    margin-top: 20%;
     max-height: 100%;
     display: block;
     margin: auto;
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+#pages-container {
+    background-image: url("../images/open-book.png");
+    height: 95%;
+    width: 800px;
+    padding-top: 3%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 #text-image {
     max-width: 100%;
     height: auto;
@@ -35,16 +62,49 @@ h1 {
 
 #inputSearch {
     background-color: rgba(0, 0, 0, 0);
+    /* fill-color: rgba(0, 0, 0, 0); */
     border-color:  rgba(0, 0, 0, .3);
     display: block;
     height: 80px;
     color:rgba(0, 0, 0, .3);
     font-size: 45px;
-    max-width: 100%;
+    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.red {
+.blue {
+    position: relative;
+    bottom: -10px;
+    background-color: aqua;
+}
 
+.grey {
+    position: relative;
+    bottom: -10px;
+    background-color: gainsboro;
+}
+
+.green {
+    position: relative;
+    bottom: -10px;
+    background-color: chartreuse;
+}
+
+.orange {
+    position: relative;
+    bottom: -10px;
+    background-color: coral;
+}
+
+.cream {
+    position: relative;
+    bottom: -10px;
+    background-color: bisque;
+}
+
+.yellow {
+    position: relative;
+    bottom: -10px;
+    background-color: gold;
 }
