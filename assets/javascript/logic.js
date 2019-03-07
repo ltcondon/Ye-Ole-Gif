@@ -46,7 +46,7 @@ $(document).ready(function() {
   //when one of these ".gif-buttons" is clicked:
   $(document).on("click", ".gif-button", function() {
     
-    //some animations happen (somwe only if gifs have not been previously loaded):
+    //some animations happen (some only if gifs have not been previously loaded):
     $("#images").fadeOut();
     $("#book-container").attr("id", "pages-container")
 

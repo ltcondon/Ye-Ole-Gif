@@ -1,12 +1,13 @@
 # Ye-Ole-Gif
 
-url: [assets/images/opener-screenshot.png]
+url: ![assets/images/opener-screenshot.png]
+![opener](assets/images/opener-screenshot.png)
 
 Live link: https://ltcondon.github.io/Ye-Ole-Gif/
 
 # Summary
 
-url: [assets/images/genereated-screenshot.png]
+![generated](assets/images/genereated-screenshot.png)
 
 Ye Ole Book o' GIFs is a gif generator that allows a user to generate random GIFs of their choosing by first adding the keyword they'd like to search for and then clicking on the button that dynamically generates when they search.  The GIFs are then displayed in an organized fashion against an 'open book' backdrop to mimic the opening of the 'closed book' backdrop that first appears when the page is loaded.
 
