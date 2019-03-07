@@ -1,11 +1,13 @@
 $(document).ready(function() {
     var newButton; // to be given click listener
     var buttonArea = $("#buttons"); // to be appended on search enter
-    var gifArea = $("#images");
+    var leftArea = $("#left-images");
+    var rightArea = $("#right-images");
     var gifCount = 0; // to be assigned value of number of results specified
     var buttonColors = ["blue", "grey", "green", "orange", "cream", "yellow"];  // array of css classes that will be randomly assigned upon button creation;
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=";
     var initialButtons = ["Tywinn", "Dooku", "Gandalf", "Dumbledore"]; // initial buttons on page
+    var gifLoaded = false;
 
     $(document).ready(function() {
         for (var i=0; i < initialButtons.length; i++) {
@@ -31,10 +33,15 @@ $(document).ready(function() {
     })
 
   $(document).on("click", ".gif-button", function() {
+      if (gifLoaded === false) {
         $(".open").fadeOut();
-        $("#buttons").css("max-width", "840px");
-        $("#buttons").css("margin-bottom", "-=5px");
-        gifArea.empty();
+        $("#buttons").css("max-width", "800px");
+        $("#buttons").css("padding-left", "8%");
+        $("#buttons").css("top", "+=23px");
+      }
+        leftArea.empty();
+        rightArea.empty();
+
         var searchWord = $(this).val();
         console.log(searchWord);
         $("#book-container").attr("id", "pages-container")
@@ -48,15 +55,25 @@ $(document).ready(function() {
 
         for (var i = 0; i < 4; i++){
             // console.log(i, response.data[i].images.fixed_height_still.url)
+            gifCount++;
             var gifToAdd = $("<img>").attr("src", response.data[i].images.fixed_height_still.url);
                 gifToAdd.addClass("gif");
+                gifToAdd.addClass("img-fluid");
                 gifToAdd.attr("data-animate", response.data[i].images.fixed_height.url);
                 gifToAdd.attr("data-still", response.data[i].images.fixed_height_still.url);
                 gifToAdd.attr("data-state", "still");
-                gifArea.append(gifToAdd);
-        }
-            
+                
+                if (gifCount < 3) {
+                    leftArea.append(gifToAdd);
+                    leftArea.append("<br><br>");
+                }
+                else {
+                    rightArea.append(gifToAdd);
+                    rightArea.append("<br><br>");
+                }
+            }
         })
+        gifLoaded = true;
     });
 
   $(document).on("click", ".gif", function() {
