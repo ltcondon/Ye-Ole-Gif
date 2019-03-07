@@ -124,10 +124,19 @@ h2 {
 
 #images {
     width: 870px;
+    display: none;
 }
 
 .gif {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+#back-button {
+    float: right;
+    display: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-height: 20px;
 }
